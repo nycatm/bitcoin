@@ -28,7 +28,7 @@ _bitcoin_cli() {
     local cur prev words=() cword
     local bitcoin-us_cli
 
-    # save and use original argument to invoke bitcoin-cli for -help, help and RPC
+    # save and use original argument to invoke bitcoin-us-cli for -help, help and RPC
     # as bitcoin-us-cli might not be in $PATH
     bitcoin-us_cli="$1"
 
