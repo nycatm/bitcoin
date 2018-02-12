@@ -12,7 +12,7 @@
 # Where to write bitcoind data (be mindful that the blockchain is large)
 #BITCOIN-US_DATADIR="/var/lib/bitcoin-us"
 
-# User and group to own bitcoind process
+# User and group to own bitcoin-us process
 #BITCOIN-US_USER="bitcoin"
 #BITCOIN-US_GROUP="bitcoin"
 
