@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  bitcoind The bitcoin core server.
+#  bitcoin-us The bitcoin core server.
 #
 #
 # chkconfig: 345 80 20
-# description: bitcoind
-# processname: bitcoind
+# description: bitcoin-us
+# processname: bitcoin-us
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/bitcoind, see below
-if [ -f /etc/sysconfig/bitcoind ]; then
-        . /etc/sysconfig/bitcoind
+# you can override defaults in /etc/sysconfig/bitcoin-us, see below
+if [ -f /etc/sysconfig/bitcoin-us ]; then
+        . /etc/sysconfig/bitcoin-us
 fi
 
 RETVAL=0
 
-prog=bitcoind
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/bitcoind
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/bitcoind}
+prog=bitcoin-us
+# you can override the lockfile via BITCOIN-US_LOCKFILE in /etc/sysconfig/bitcoin-us
+lockfile=${BITCOIN-US_LOCKFILE-/var/lock/subsys/bitcoin-us}
 
-# bitcoind defaults to /usr/bin/bitcoind, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/bitcoind}
+# bitcoin-us defaults to /usr/bin/bitcoin-us, override with BITCOIN-US_BIN
+bitcoin-us=${BITCOIN-US_BIN-/usr/bin/bitcoin-us}
 
-# bitcoind opts default to -disablewallet, override with BITCOIND_OPTS
-bitcoind_opts=${BITCOIND_OPTS--disablewallet}
+# bitcoin-us opts default to -disablewallet, override with BITCOIN-US_OPTS
+bitcoin-us_opts=${BITCOIN-US_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    daemon $DAEMONOPTS $bitcoin-us $bitcoin-us_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile
