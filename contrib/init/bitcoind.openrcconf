@@ -1,7 +1,7 @@
 # /etc/conf.d/bitcoin-us: config file for /etc/init.d/bitcoin-us
 
 # Config file location
-#BITCOIN-US_CONFIGFILE="/etc/bitcoin-us/bitcoin-us.conf"
+#BITCOIN-US_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIN-US_USER)
 #BITCOIN-US_PIDDIR="/var/run/bitcoin-us"
